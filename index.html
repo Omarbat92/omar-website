@@ -3,41 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Omar Al-Bataineh | Academic Website</title>
+  <title>Omar I. Al-Bataineh | Academic Website</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-      background: #f9f9f9;
-      color: #333;
+      background: #f4f6f8;
+      color: #2c3e50;
     }
     header {
       background: #2c3e50;
       color: #fff;
-      padding: 1.5rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
     nav {
+      background: #34495e;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      background: #34495e;
+      gap: 2rem;
+      padding: 1rem 0;
     }
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
+    h1, h2 {
+      margin-top: 0;
+    }
     h2 {
-      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .pub-list li {
+      margin-bottom: 0.75rem;
+    }
+    em {
+      font-style: italic;
+    }
+    strong {
+      font-weight: bold;
     }
     footer {
       text-align: center;
@@ -45,23 +60,20 @@
       background: #2c3e50;
       color: white;
     }
-    .pub-list li {
-      margin-bottom: 0.5rem;
-    }
     .profile-pic {
       display: block;
       margin: 1rem auto;
       border-radius: 50%;
-      max-width: 200px;
+      max-width: 180px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Dr. Omar Al-Bataineh</h1>
+  <h1>Dr. Omar I. Al-Bataineh</h1>
   <p>Research Scientist, Gran Sasso Science Institute, Italy</p>
-  <img src="omar-image.jpg" alt="Dr. Omar Al-Bataineh" class="profile-pic" />
+  <img src="omar-image.jpg" alt="Dr. Omar I. Al-Bataineh" class="profile-pic" />
 </header>
 
 <nav>
@@ -73,32 +85,32 @@
 
 <section id="research">
   <h2>Research</h2>
-  <p>My research spans formal methods and software engineering, with particular emphasis on model checking, static analysis, runtime verification, and automated program repair. The central objective of my work is to strengthen the integration between formal verification techniques and practical software development processes. Despite the significant potential of formal methods, their adoption in mainstream software engineering remains limited. My research aims to bridge this gap by developing scalable, theoretically grounded techniques that improve the reliability and robustness of software systems. A key focus is on advancing automated program repair to handle complex scenarios, including multi-fault programs, through principled approaches informed by formal reasoning.</p>
-  <p>For a comprehensive list of my publications, please visit my <a href="https://dblp.org/pid/27/8038.html" target="_blank">DBLP profile</a>. You can also download my <a href="omar-cv.pdf" download>curriculum vitae</a> for more details about my academic background and experience.</p>
+  <p>Dr. Omar I. Al-Bataineh's research spans formal methods and software engineering, focusing on model checking, static analysis, runtime verification, and automated program repair. His work aims to integrate formal verification techniques into practical software development processes to enhance reliability and robustness, particularly in multi-fault program scenarios. He develops scalable, theoretically grounded methods for improving the automation of program repair and bridging the gap between formal methods and mainstream software engineering.</p>
+  <p>For a comprehensive list of his publications, visit his <a href="https://dblp.org/pid/27/8038.html" target="_blank">DBLP profile</a>. You can also download his <a href="omar-cv.pdf" download>curriculum vitae</a> for more details about his academic background and experience.</p>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
   <ul class="pub-list">
-    <li>2025: Omar Al-Bataineh. <em>Current Challenges in Automated Multi-fault Program Repair</em>. APR@ICSE 2025.</li>
-    <li>2025: Omar Al-Bataineh. <em>Towards Developing Effective Oracles to Reduce Patch Overfitting in Automated Program Repair</em>. SANER 2025.</li>
-    <li>2024: Omar Al-Bataineh. <em>A Formal Treatment of Performance Bugs</em>. ASE 2024.</li>
-    <li>2024: Omar Al-Bataineh. <em>Automated Repair of Multi-fault Programs: Obstacles, Solutions, and Prospects</em>. ASE 2024.</li>
-    <li>2024: Omar Al-Bataineh, Leon Moonen. <em>Towards Developing Effective Fault Localization Techniques for Termination Bugs in Loop Programs</em>. APR@ICSE 2024.</li>
-    <li>2024: Omar Al-Bataineh. <em>Invariant-based Program Repair</em>. FASE 2024.</li>
-    <li>2024: Omar Al-Bataineh, Leon Moonen, Linas Vidziunas. <em>Extending the Range of Bugs that Automated Program Repair Can Handle</em>. JSS 2024.</li>
-    <li>2022: Omar Al-Bataineh, Leon Moonen. <em>Towards Extending the Range of Bugs that Automated Program Repair Can Handle</em>. QRS 2022. <strong>(Best Paper Award)</strong></li>
-    <li>2021: Omar Al-Bataineh, Anastasiia Grishina, Leon Moonen. <em>Towards More Reliable Automated Program Repair by Integrating Static Analysis Techniques</em>. QRS 2021.</li>
-    <li>2021: Umair Ahmed, Zhiyu Fan, Jooyong Yi, Omar Al-Bataineh, Abhik Roychoudhury. <em>Verifix: Verified Repair of Programming Assignments</em>. TOSEM 2021.</li>
-    <li>2020: Omar Al-Bataineh, Abhik Roychoudhury. <em>Smart Contract Repair</em>. TOSEM 2020.</li>
-    <li>2019: Omar Al-Bataineh, David S. Rosenblum, Mark Reynolds. <em>Efficient Decentralized LTL Monitoring Framework Using Tableau Approach</em>. TECS 2019.</li>
-    <li>2016: Omar Al-Bataineh, Mark Reynolds, Tim French. <em>Finding Minimum and Maximum Termination Time of Timed Automata Models with Cyclic Behaviour</em>. TCS 2016.</li>
-    <li>2015: Omar Al-Bataineh, Mark Reynolds. <em>Accelerating Worst Case Execution Time Analysis of Timed Automata Models with Cyclic Behaviour</em>. FAOC 2015.</li>
-    <li>2014: Omar Al-Bataineh, Mark Reynolds, Tim French. <em>Finding Best and Worst Case Execution Times of Systems Using Difference-Bound Matrices</em>. FORMATS 2014.</li>
-    <li>2014: Omar Al-Bataineh, Mark Reynolds, Tim French. <em>Accelerating Worst Case Execution Time Analysis of Timed Automata Models with Cyclic Behavior</em>. FORMATS 2014.</li>
-    <li>2012: Omar Al-Bataineh, Tim French, Terry Woodings. <em>Formal Modeling and Analysis of a Distributed Transaction Protocol in UPPAAL</em>. TIME 2012.</li>
-    <li>2011: Omar Al-Bataineh, Ron van der Meyden. <em>Abstraction for Epistemic Model Checking of Dining Cryptographers-based Protocols</em>. TARK 2011.</li>
-    <li>2010: Omar Al-Bataineh, Ron van der Meyden. <em>Epistemic Model Checking for Knowledge-Based Program Implementation: An Application to Anonymous Broadcast</em>. SecureComm 2010.</li>
+    <li>2025: Omar I. Al-Bataineh. <em>Current Challenges in Automated Multi-fault Program Repair</em>. <strong>APR@ICSE 2025</strong>.</li>
+    <li>2025: Omar I. Al-Bataineh. <em>Towards Developing Effective Oracles to Reduce Patch Overfitting in Automated Program Repair</em>. <strong>SANER 2025</strong>.</li>
+    <li>2024: Omar I. Al-Bataineh. <em>A Formal Treatment of Performance Bugs</em>. <strong>ASE 2024</strong>.</li>
+    <li>2024: Omar I. Al-Bataineh. <em>Automated Repair of Multi-fault Programs: Obstacles, Solutions, and Prospects</em>. <strong>ASE 2024</strong>.</li>
+    <li>2024: Omar I. Al-Bataineh, Leon Moonen. <em>Towards Developing Effective Fault Localization Techniques for Termination Bugs in Loop Programs</em>. <strong>APR@ICSE 2024</strong>.</li>
+    <li>2024: Omar I. Al-Bataineh. <em>Invariant-based Program Repair</em>. <strong>FASE 2024</strong>.</li>
+    <li>2024: Omar I. Al-Bataineh, Leon Moonen, Linas Vidziunas. <em>Extending the Range of Bugs that Automated Program Repair Can Handle</em>. <strong>JSS 2024</strong>.</li>
+    <li>2022: Omar I. Al-Bataineh, Leon Moonen. <em>Towards Extending the Range of Bugs that Automated Program Repair Can Handle</em>. <strong>QRS 2022</strong>. <strong>(Best Paper Award)</strong></li>
+    <li>2021: Omar I. Al-Bataineh, Anastasiia Grishina, Leon Moonen. <em>Towards More Reliable Automated Program Repair by Integrating Static Analysis Techniques</em>. <strong>QRS 2021</strong>.</li>
+    <li>2021: Umair Ahmed, Zhiyu Fan, Jooyong Yi, Omar I. Al-Bataineh, Abhik Roychoudhury. <em>Verifix: Verified Repair of Programming Assignments</em>. <strong>TOSEM 2021</strong>.</li>
+    <li>2020: Omar I. Al-Bataineh, Abhik Roychoudhury. <em>Smart Contract Repair</em>. <strong>TOSEM 2020</strong>.</li>
+    <li>2019: Omar I. Al-Bataineh, David S. Rosenblum, Mark Reynolds. <em>Efficient Decentralized LTL Monitoring Framework Using Tableau Approach</em>. <strong>TECS 2019</strong>.</li>
+    <li>2016: Omar I. Al-Bataineh, Mark Reynolds, Tim French. <em>Finding Minimum and Maximum Termination Time of Timed Automata Models with Cyclic Behaviour</em>. <strong>TCS 2016</strong>.</li>
+    <li>2015: Omar I. Al-Bataineh, Mark Reynolds. <em>Accelerating Worst Case Execution Time Analysis of Timed Automata Models with Cyclic Behaviour</em>. <strong>FAOC 2015</strong>.</li>
+    <li>2014: Omar I. Al-Bataineh, Mark Reynolds, Tim French. <em>Finding Best and Worst Case Execution Times of Systems Using Difference-Bound Matrices</em>. <strong>FORMATS 2014</strong>.</li>
+    <li>2014: Omar I. Al-Bataineh, Mark Reynolds, Tim French. <em>Accelerating Worst Case Execution Time Analysis of Timed Automata Models with Cyclic Behavior</em>. <strong>FORMATS 2014</strong>.</li>
+    <li>2012: Omar I. Al-Bataineh, Tim French, Terry Woodings. <em>Formal Modeling and Analysis of a Distributed Transaction Protocol in UPPAAL</em>. <strong>TIME 2012</strong>.</li>
+    <li>2011: Omar I. Al-Bataineh, Ron van der Meyden. <em>Abstraction for Epistemic Model Checking of Dining Cryptographers-based Protocols</em>. <strong>TARK 2011</strong>.</li>
+    <li>2010: Omar I. Al-Bataineh, Ron van der Meyden. <em>Epistemic Model Checking for Knowledge-Based Program Implementation: An Application to Anonymous Broadcast</em>. <strong>SecureComm 2010</strong>.</li>
   </ul>
 </section>
 
@@ -113,11 +125,11 @@
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: omar.albataineh@gssi.it</p>
+  <p>Email: <a href="mailto:omar.albataineh@gssi.it">omar.albataineh@gssi.it</a> | <a href="mailto:omerdep@yahoo.com">omerdep@yahoo.com</a></p>
 </section>
 
 <footer>
-  <p>&copy; 2025 Dr. Omar Al-Bataineh</p>
+  <p>&copy; 2025 Dr. Omar I. Al-Bataineh</p>
 </footer>
 
 </body>
