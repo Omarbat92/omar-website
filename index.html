@@ -55,13 +55,29 @@
       font-size: 0.9rem;
       text-align: center;
     }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header img {
+      width: 120px;
+      height: auto;
+      object-fit: cover;
+      border: 1px solid #000;
+      margin-left: 1rem;
+    }
   </style>
 </head>
 <body>
-<header>
-  <h1>Omar I. Al-Bataineh</h1>
-  <p>Research Scientist, Gran Sasso Science Institute, Italy</p>
-</header>
+
+  <header class="header">
+    <div>
+      <h1>Omar I. Al-Bataineh</h1>
+      <p>Research Scientist, Gran Sasso Science Institute, Italy</p>
+    </div>
+    <img src="omar-image.jpg" alt="Omar I. Al-Bataineh">
+  </header>
 
   <nav>
     <a href="#news">News</a>
@@ -105,7 +121,6 @@
       <li><span class="year">2024</span> <em>Invariant-based Program Repair</em>. FASE 2024.</li>
       <li><span class="year">2024</span> <em>Extending APR Capabilities</em>. JSS 2024.</li>
       <li><span class="year">2022</span> <em>Extending APR for More Bugs</em>. QRS 2022. <strong>Best Paper Award</strong>.</li>
-      <li><span class="year">2021</span> <em>Integrating Static Analysis in APR</em>. QRS 2021.</li>
       <li><span class="year">2020</span> <em>Smart Contract Repair</em>. TOSEM 2020.</li>
       <li><span class="year">2019</span> <em>Decentralized LTL Monitoring with Tableau</em>. TECS 2019.</li>
     </ul>
