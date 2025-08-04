@@ -1,83 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Omar I. Al-Bataineh</title>
   <style>
+    :root {
+      --primary-color: #000;
+      --accent-color: #333;
+    }
+
     body {
       font-family: Georgia, serif;
       max-width: 750px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      color: #000;
+      margin: 0 auto;
+      padding: 6rem 1rem 2rem;
+      color: var(--primary-color);
       background: #fff;
     }
+
     h1, h2 {
       font-weight: normal;
+      margin-top: 2rem;
     }
+
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 0;
+      margin-bottom: 0.2rem;
     }
+
     h2 {
       font-size: 1.5rem;
-      margin-top: 2rem;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid var(--primary-color);
       padding-bottom: 0.3rem;
     }
+
     nav {
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+      z-index: 999;
+      padding: 0.8rem 1rem;
+      text-align: center;
     }
+
     nav a {
-      margin-right: 1rem;
+      margin: 0 0.7rem;
       text-decoration: none;
-      color: #000;
+      color: var(--primary-color);
+      font-weight: 500;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     li {
       margin-bottom: 0.5rem;
     }
+
     .year {
       font-weight: bold;
       display: inline-block;
       width: 3rem;
     }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      text-align: center;
-    }
+
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     .header img {
       width: 120px;
       height: auto;
       object-fit: cover;
-      border: 1px solid #000;
+      border: 1px solid var(--primary-color);
       margin-left: 1rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+    }
+
+    .collapsible {
+      cursor: pointer;
+      padding: 0.3rem 0;
+      font-weight: bold;
+      color: var(--accent-color);
+    }
+
+    .content {
+      display: none;
+      margin-top: 0.5rem;
+    }
+
+    .active + .content {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header img {
+        margin: 1rem 0 0 0;
+      }
+      nav {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header class="header">
-    <div>
-      <h1>Omar I. Al-Bataineh</h1>
-      <p>Research Scientist, Gran Sasso Science Institute, Italy</p>
-    </div>
-    <img src="omar-image.jpg" alt="Omar I. Al-Bataineh">
-  </header>
 
   <nav>
     <a href="#news">News</a>
@@ -87,6 +135,14 @@
     <a href="#teaching">Teaching</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <header class="header">
+    <div>
+      <h1>Omar I. Al-Bataineh</h1>
+      <p>Research Scientist, Gran Sasso Science Institute, Italy</p>
+    </div>
+    <img src="omar-image.jpg" alt="Omar I. Al-Bataineh" />
+  </header>
 
   <section id="news">
     <h2>News</h2>
@@ -111,18 +167,48 @@
 
   <section id="publications">
     <h2>Selected Publications</h2>
-    <ul>
-      <li><span class="year">2025</span> <em>Developing Effective Oracles to Reduce Patch Overfitting in APR</em>. SANER 2025.</li>
-      <li><span class="year">2025</span> <em>Reduce Before You Repair: Combining Slicing with APR</em>. SANER 2025.</li>
-      <li><span class="year">2024</span> <em>A Formal Treatment of Performance Bugs</em>. ASE 2024.</li>
-      <li><span class="year">2024</span> <em>Automated Repair of Multi-fault Programs</em>. ASE 2024.</li>
-      <li><span class="year">2024</span> <em>Fault Localization for Termination Bugs in Loop Programs</em>. APR@ICSE 2024.</li>
-      <li><span class="year">2024</span> <em>Invariant-based Program Repair</em>. FASE 2024.</li>
-      <li><span class="year">2024</span> <em>Extending APR Capabilities</em>. JSS 2024.</li>
-      <li><span class="year">2022</span> <em>Extending APR for More Bugs</em>. QRS 2022. <strong>Best Paper Award</strong>.</li>
-      <li><span class="year">2020</span> <em>Smart Contract Repair</em>. TOSEM 2020.</li>
-      <li><span class="year">2019</span> <em>Decentralized LTL Monitoring with Tableau</em>. TECS 2019.</li>
-    </ul>
+
+    <div>
+      <div class="collapsible">2025</div>
+      <div class="content">
+        <ul>
+          <li><em>Developing Effective Oracles to Reduce Patch Overfitting in APR</em>. SANER 2025.</li>
+          <li><em>Reduce Before You Repair: Combining Slicing with APR</em>. SANER 2025.</li>
+        </ul>
+      </div>
+
+      <div class="collapsible">2024</div>
+      <div class="content">
+        <ul>
+          <li><em>A Formal Treatment of Performance Bugs</em>. ASE 2024.</li>
+          <li><em>Automated Repair of Multi-fault Programs</em>. ASE 2024.</li>
+          <li><em>Fault Localization for Termination Bugs in Loop Programs</em>. APR@ICSE 2024.</li>
+          <li><em>Invariant-based Program Repair</em>. FASE 2024.</li>
+          <li><em>Extending APR Capabilities</em>. JSS 2024.</li>
+        </ul>
+      </div>
+
+      <div class="collapsible">2022</div>
+      <div class="content">
+        <ul>
+          <li><em>Extending APR for More Bugs</em>. QRS 2022. <strong>Best Paper Award</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="collapsible">2020</div>
+      <div class="content">
+        <ul>
+          <li><em>Smart Contract Repair</em>. TOSEM 2020.</li>
+        </ul>
+      </div>
+
+      <div class="collapsible">2019</div>
+      <div class="content">
+        <ul>
+          <li><em>Decentralized LTL Monitoring with Tableau</em>. TECS 2019.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="teaching">
@@ -139,8 +225,19 @@
   </section>
 
   <footer>
-    &copy; 2025 Omar I. Al-Bataineh
+    &copy; 2025 Omar I. Al-Bataineh | <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">ORCID</a>
   </footer>
+
+  <script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 
 </body>
 </html>
