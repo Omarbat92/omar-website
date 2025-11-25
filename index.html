@@ -189,30 +189,35 @@
   <h2>Research</h2>
 
   <p>
-    My research sits at the intersection of formal methods and automated software engineering. I aim to improve software reliability by replacing purely empirical validation with formal proofs that ensure correctness, predictable performance, and practical applicability in real-world systems.
+    My research focuses on automated program analysis, program repair, model checking, static analysis, and fault localization, aiming to improve the reliability and scalability of software tools for real-world applications.
   </p>
 
   <hr>
 
-  <h3>Theme 1: Verified Progress for Multi-Fault Repair</h3>
+  <h3>Theme 1: Multi-Fault Automated Program Repair</h3>
   <p>
-    Complex software failures often involve interacting faults that break traditional repair methods. I develop proof-producing approaches that replace probabilistic test oracles with formal progress checks, ensuring monotonic, non-regressive correctness while accounting for fault interactions.
+    I study automated techniques for repairing programs affected by multiple interacting faults—bugs that manifest together within a single execution. My work focuses on designing lightweight and effective test oracles to guide patch generation, improving repair quality and reducing overfitting in the presence of complex fault interactions.  
+    This research builds on foundational results in automated program repair that formalize overfitting and its theoretical limits, ensuring that repair strategies are not only empirically effective but also grounded in rigorous reasoning.
+    <a href="Confpapers/Undecidability.pdf" target="_blank" title="Foundations of Overfitting in APR PDF" style="margin-left:6px;">
+      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i> Foundations of APR
+    </a>
   </p>
 
   <hr>
 
-  <h3>Theme 2: Theoretical Foundations of Automated Program Repair</h3>
+  <h3>Theme 2: Formal Methods for Reliable and Provable Program Repair</h3>
   <p>
-    Overfitting—patches that pass tests but fail the true specification—is not merely an empirical problem. My work formalizes overfitting as an unavoidable consequence of undecidability when full specifications are unavailable, and develops methods to quantify and reason about this inherent uncertainty to guide more reliable repair systems.
+    I explore the use of formal methods and decidable program fragments to generate patches that are not only correct but also provably reliable, moving automated program repair toward higher-assurance applications.
   </p>
 
   <hr>
 
-  <h3>Theme 3: Practical, Termination-Aware, and High-Assurance Patching</h3>
+  <h3>Theme 3: Termination-Aware and Context-Sensitive Program Repair</h3>
   <p>
-    Formally correct patches must also be practical. I integrate formal analysis of termination behavior and context-sensitive constraints to generate patches that maintain or improve performance and efficiency, moving automated repair toward high-assurance applications in critical systems.
+    This line of work focuses on making automated repair practical by considering performance, termination behavior, and other context-dependent factors, aiming to generate patches that are both correct and efficient for real-world software systems.
   </p>
 </section>
+
 
 
   <section id="publications">
