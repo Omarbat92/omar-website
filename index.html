@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Omar I. Al-Bataineh</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
   <style>
     :root {
       --accent: #004466;
@@ -20,34 +21,40 @@
       line-height: 1.7;
     }
 
+    /* --- Header --- */
+
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      border-bottom: 2px solid #ddd;
+      gap: 1.5rem;
       padding-bottom: 1.5rem;
+      border-bottom: 2px solid #ddd;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin: 0;
       color: var(--accent);
+      letter-spacing: 0.5px;
     }
 
     header p {
-      font-size: 1rem;
-      margin: 0.5rem 0 0 0;
+      font-size: 1.05rem;
+      margin: 0.4rem 0 0 0;
+      color: #333;
     }
 
-    header img {
-      width: 120px;
+    header img.profile-pic {
+      width: 150px;
       height: auto;
       object-fit: cover;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.12);
     }
+
+    /* --- Navigation --- */
 
     nav {
       margin: 2rem 0;
@@ -61,19 +68,20 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 0.95rem;
-      transition: color 0.2s;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
+    /* --- Sections --- */
+
     section {
       margin-bottom: 3rem;
     }
 
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.3rem;
       margin-bottom: 1rem;
@@ -83,7 +91,6 @@
     ul {
       list-style: none;
       padding: 0;
-      margin: 0;
     }
 
     li {
@@ -106,13 +113,15 @@
       margin-top: 3rem;
     }
 
+    /* --- Mobile --- */
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      header img {
+      header img.profile-pic {
         align-self: center;
       }
 
@@ -127,14 +136,15 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <div>
       <h1>Omar I. Al-Bataineh</h1>
-<p>Research Scientist at the Gran Sasso Science Institute, Italy</p>
+      <p>Research Scientist at the Gran Sasso Science Institute, Italy</p>
     </div>
-    <img src="Omar-prof.png" alt="Omar I. Al-Bataineh">
+    <img src="Omar-prof.png" alt="Omar I. Al-Bataineh" class="profile-pic">
   </header>
 
   <nav>
@@ -154,36 +164,36 @@
       <em>Debugging the Undebuggable: Why Multi-Fault Programs Break Debugging and Repair Tools</em> 
       has been accepted to <strong>ASE NIER 2025</strong>.
       <a href="Confpapers/ASE_undebuggable_presentation.pdf" target="_blank" title="Download PDF" style="margin-left:6px;">
-    <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
-  </a>
+        <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+      </a>
     </li>
+
     <li>
-     <strong>August 2025</strong> — My paper 
+      <strong>August 2025</strong> — My paper 
       <em>Interaction-Aware Patch Assessment for Multi-Fault Automated Program Repair</em> 
       has been accepted to <strong>ASE NIER 2025</strong>.
       <a href="Confpapers/poster_patch_assessment_ASE.pdf" target="_blank" title="Download PDF" style="margin-left:6px;">
-    <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
-  </a>
+        <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+      </a>
     </li>
-   <li>
-  <strong>July 2025</strong> — My paper 
-  <em>Towards Interaction-Aware Validation Oracles for Multi-Fault Program Repair</em> 
-  has been accepted to <strong>ICSME 2025</strong>.
-  <a href="https://ieeexplore.ieee.org/document/11185949" target="_blank" title="View Paper on IEEE Xplore" style="margin-left:6px;">
-    <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
-  </a>
-</li>
+
+    <li>
+      <strong>July 2025</strong> — My paper 
+      <em>Towards Interaction-Aware Validation Oracles for Multi-Fault Program Repair</em> 
+      has been accepted to <strong>ICSME 2025</strong>.
+      <a href="https://ieeexplore.ieee.org/document/11185949" target="_blank" title="View Paper on IEEE Xplore" style="margin-left:6px;">
+        <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+      </a>
+    </li>
   </ul>
 </section>
 
-
-
-  <section id="bio">
-    <h2>Bio</h2>
-    <p>
-      I am a Research Scientist at the Gran Sasso Science Institute in Italy. My research lies at the intersection of software engineering and formal methods, with a particular focus on automated program repair, fault localization, and software verification. I earned my Ph.D. in Computer Science from the University of Western Australia, and hold degrees from the University of New South Wales and Jordan University of Science and Technology. Before joining GSSI, I held research positions at Simula Research Laboratory, the National University of Singapore, and Nanyang Technological University.
-    </p>
-  </section>
+<section id="bio">
+  <h2>Bio</h2>
+  <p>
+    I am a Research Scientist at the Gran Sasso Science Institute in Italy. My work lies at the intersection of software engineering and formal methods, with a particular focus on automated program repair, fault localization, and software verification. I earned my Ph.D. in Computer Science from the University of Western Australia and hold degrees from the University of New South Wales and Jordan University of Science and Technology. Before joining GSSI, I held research positions at Simula Research Laboratory, the National University of Singapore, and Nanyang Technological University.
+  </p>
+</section>
 
 <section id="research">
   <h2>Research</h2>
@@ -196,7 +206,7 @@
 
   <h3>Theme 1: Multi-Fault Automated Program Repair</h3>
   <p>
-    I study techniques for repairing programs affected by multiple interacting faults—bugs that manifest together within a single execution. My work focuses on designing lightweight and effective test oracles to guide patch generation, improving repair quality and reducing overfitting in complex fault scenarios.
+    I study techniques for repairing programs affected by multiple interacting faults—bugs that manifest together within a single execution. My work explores lightweight diagnostic oracles and interaction-aware analysis to improve repair quality and reduce overfitting in complex fault scenarios.
     <a href="Confpapers/MFAPR.pdf" target="_blank" title="Download PDF" style="margin-left:6px;">
       <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
     </a>
@@ -206,53 +216,53 @@
 
   <h3>Theme 2: Provably Reliable Program Repair</h3>
   <p>
-    I explore the use of formal methods and decidable program fragments to generate patches that are not only correct but also provably reliable, advancing automated program repair toward high-assurance applications.
+    I explore how formal methods and decidable fragments can be used to generate patches that are not only correct but also provably reliable, advancing automated program repair toward high-assurance software contexts.
   </p>
 
   <hr>
 
   <h3>Theme 3: Termination-Aware and Context-Sensitive Repair</h3>
   <p>
-    This research focuses on making automated repair practical by accounting for performance, termination behavior, and other context-dependent factors, aiming to produce patches that are both correct and efficient for real-world software systems.
+    This line of work focuses on incorporating termination reasoning, performance constraints, and context-dependent behavior into patch generation, enabling repairs that are both correct and efficient for production systems.
   </p>
 </section>
 
+<section id="publications">
+  <h2>Selected Publications</h2>
+  <ul>
+    <li><span class="year">2025</span> <em>Developing Effective Oracles to Reduce Patch Overfitting in APR</em>. SANER 2025.</li>
+    <li><span class="year">2025</span> <em>Reduce Before You Repair: Combining Slicing with APR</em>. SANER 2025.</li>
+    <li><span class="year">2024</span> <em>A Formal Treatment of Performance Bugs</em>. ASE 2024.</li>
+    <li><span class="year">2024</span> <em>Automated Repair of Multi-fault Programs</em>. ASE 2024.</li>
+    <li><span class="year">2024</span> <em>Fault Localization for Termination Bugs in Loop Programs</em>. APR@ICSE 2024.</li>
+    <li><span class="year">2024</span> <em>Invariant-based Program Repair</em>. FASE 2024.</li>
+    <li><span class="year">2024</span> <em>Extending APR Capabilities</em>. JSS 2024.</li>
+    <li><span class="year">2022</span> <em>Extending APR for More Bugs</em>. QRS 2022. <strong>Best Paper Award</strong>.</li>
+    <li><span class="year">2020</span> <em>Smart Contract Repair</em>. TOSEM 2020.</li>
+    <li><span class="year">2019</span> <em>Decentralized LTL Monitoring with Tableau</em>. TECS 2019.</li>
+  </ul>
+  <p>
+    For a complete list of publications, please visit my 
+    <a href="https://dblp.org/pid/27/8038.html" target="_blank">DBLP profile</a>.
+  </p>
+</section>
 
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul>
+    <li>Advanced Computer Security, UNSW.</li>
+    <li>Introduction to Java Programming, UWA.</li>
+  </ul>
+</section>
 
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: omar.albataineh@gssi.it</p>
+</section>
 
-  <section id="publications">
-    <h2>Selected Publications</h2>
-    <ul>
-      <li><span class="year">2025</span> <em>Developing Effective Oracles to Reduce Patch Overfitting in APR</em>. SANER 2025.</li>
-      <li><span class="year">2025</span> <em>Reduce Before You Repair: Combining Slicing with APR</em>. SANER 2025.</li>
-      <li><span class="year">2024</span> <em>A Formal Treatment of Performance Bugs</em>. ASE 2024.</li>
-      <li><span class="year">2024</span> <em>Automated Repair of Multi-fault Programs</em>. ASE 2024.</li>
-      <li><span class="year">2024</span> <em>Fault Localization for Termination Bugs in Loop Programs</em>. APR@ICSE 2024.</li>
-      <li><span class="year">2024</span> <em>Invariant-based Program Repair</em>. FASE 2024.</li>
-      <li><span class="year">2024</span> <em>Extending APR Capabilities</em>. JSS 2024.</li>
-      <li><span class="year">2022</span> <em>Extending APR for More Bugs</em>. QRS 2022. <strong>Best Paper Award</strong>.</li>
-      <li><span class="year">2020</span> <em>Smart Contract Repair</em>. TOSEM 2020.</li>
-      <li><span class="year">2019</span> <em>Decentralized LTL Monitoring with Tableau</em>. TECS 2019.</li>
-    </ul>
-    <p>For a complete list of publications, please visit my <a href="https://dblp.org/pid/27/8038.html" target="_blank">DBLP profile</a>.</p>
-  </section>
-
-  <section id="teaching">
-    <h2>Teaching</h2>
-    <ul>
-      <li> Advanced Computer Security, UNSW.</li>
-      <li> Introduction to Java Programming, UWA.</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: omar.albataineh@gssi.it</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Omar I. Al-Bataineh
-  </footer>
+<footer>
+  &copy; 2025 Omar I. Al-Bataineh
+</footer>
 
 </body>
 </html>
