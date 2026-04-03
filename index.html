@@ -239,12 +239,14 @@ I am a Research Scientist at the Gran Sasso Science Institute in Italy. My work 
 
 <h3> 
   Theme 2: Undecidability-Aware Program Repair 
-  <a href="Confpapers/icse_slides.pdf" target="_blank" rel="noopener noreferrer" title="View ICSE 2026 Slides" style="margin-left:6px;"> 
+  <a href="Confpapers/icse_slides.pdf" target="_blank" rel="noopener noreferrer" 
+     title="View ICSE 2026 Slides" style="margin-left:6px;"> 
     <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i> 
   </a> 
 </h3> 
+
 <p> 
-  Traditional program repair often produces "plausible" patches that pass tests but fail on unseen inputs—a consequence of the fundamental undecidability of patch validation. I investigate <b>theory-aware repair frameworks</b> that explicitly acknowledge these boundaries. By targeting <b>decidable program fragments</b> and introducing metrics like <b>Quantified Overfitting Risk ($\mathcal{R}_{OF}$)</b>, this work provides formal assurance for mission-critical systems where "passing tests" is not enough.
+  Traditional program repair techniques often yield <em>plausible</em> patches—artifacts that satisfy the available test suite yet fail to generalize to unseen inputs—reflecting the inherent undecidability of patch correctness. To address this limitation, I develop <strong>undecidability-aware repair frameworks</strong> that explicitly incorporate these theoretical boundaries by restricting repair to <strong>decidable program fragments</strong> and introducing formally grounded measures such as <span class="math">$\mathcal{R}_{\mathrm{OF}}$</span>, a quantified notion of overfitting risk. This perspective enables principled reasoning about patch validity and supports stronger correctness guarantees in safety- and mission-critical settings, where empirical adequacy alone is insufficient.
 </p>
   
 <hr>
