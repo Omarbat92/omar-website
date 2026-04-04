@@ -313,96 +313,66 @@
     My research is developed in collaboration with leading researchers across 
     the software engineering and formal methods communities.
   </p>
-  <div class="collaborators-grid">
-    <div class="collaborator-card">
-      <span class="collaborator-name">
-        <a href="https://www.comp.nus.edu.sg/~abhik/" target="_blank" rel="noopener noreferrer">
-          Abhik Roychoudhury
-        </a>
-      </span>
-      <span class="collaborator-role">Professor</span>
-      <span class="collaborator-inst">National University of Singapore</span>
-      <span class="collaborator-country">Singapore</span>
-    </div>
-    <div class="collaborator-card">
-      <span class="collaborator-name">
-        <a href="https://leonmoonen.com/" target="_blank" rel="noopener noreferrer">
-          Leon Moonen
-        </a>
-      </span>
-      <span class="collaborator-role">Senior Research Scientist</span>
-      <span class="collaborator-inst">Simula Research Laboratory</span>
-      <span class="collaborator-country">Norway</span>
-    </div>
-    <div class="collaborator-card">
-      <span class="collaborator-name">
-        <a href="https://research-repository.uwa.edu.au/en/persons/mark-reynolds" target="_blank" rel="noopener noreferrer">
-          Mark Reynolds
-        </a>
-      </span>
-      <span class="collaborator-role">Professor</span>
-      <span class="collaborator-inst">University of Western Australia</span>
-      <span class="collaborator-country">Australia</span>
-    </div>
-    <div class="collaborator-card">
-      <span class="collaborator-name">
-        <a href="https://www.unsw.edu.au/staff/ron-van-der-meyden" target="_blank" rel="noopener noreferrer">
-          Ron van der Meyden
-        </a>
-      </span>
-      <span class="collaborator-role">Professor</span>
-      <span class="collaborator-inst">University of New South Wales</span>
-      <span class="collaborator-country">Australia</span>
-    </div>
-  </div>
+  <ul class="collaborators-list">
+    <li>
+      <a href="https://abhikrc.com" target="_blank" rel="noopener noreferrer">Abhik Roychoudhury</a>
+      <span class="collab-sep">—</span>
+      <span class="collab-details">Professor, National University of Singapore</span>
+    </li>
+    <li>
+      <a href="https://leonmoonen.com/" target="_blank" rel="noopener noreferrer">Leon Moonen</a>
+      <span class="collab-sep">—</span>
+      <span class="collab-details">Senior Research Scientist, Simula Research Laboratory, Norway</span>
+    </li>
+    <li>
+      <a href="https://research-repository.uwa.edu.au/en/persons/mark-reynolds" target="_blank" rel="noopener noreferrer">Mark Reynolds</a>
+      <span class="collab-sep">—</span>
+      <span class="collab-details">Professor, University of Western Australia, Australia</span>
+    </li>
+    <li>
+      <a href="https://www.unsw.edu.au/staff/ron-van-der-meyden" target="_blank" rel="noopener noreferrer">Ron van der Meyden</a>
+      <span class="collab-sep">—</span>
+      <span class="collab-details">Professor, University of New South Wales, Australia</span>
+    </li>
+  </ul>
 </section>
 
 <style>
-.collaborators-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.2rem;
-  margin-top: 1.2rem;
+.collaborators-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
 }
 
-.collaborator-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1rem 1.1rem;
-  border-left: 3px solid #4a90d9;
-  background: rgba(74, 144, 217, 0.04);
-  border-radius: 0 6px 6px 0;
+.collaborators-list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-.collaborator-name a {
+.collaborators-list li:last-child {
+  border-bottom: none;
+}
+
+.collaborators-list a {
   font-weight: 600;
-  font-size: 0.97rem;
-  text-decoration: none;
   color: #2c5f8a;
+  text-decoration: none;
 }
 
-.collaborator-name a:hover {
+.collaborators-list a:hover {
   text-decoration: underline;
 }
 
-.collaborator-role {
-  font-size: 0.82rem;
-  color: #666;
-  font-style: italic;
+.collab-sep {
+  margin: 0 0.4rem;
+  color: #aaa;
 }
 
-.collaborator-inst {
-  font-size: 0.85rem;
-  color: #333;
-  font-weight: 500;
-}
-
-.collaborator-country {
-  font-size: 0.78rem;
-  color: #888;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.collab-details {
+  color: #555;
+  font-size: 0.92rem;
 }
 </style>
   
