@@ -220,53 +220,91 @@
 
 <section id="research">
   <h2>Research</h2>
-
   <p>
-    My research focuses on automated program analysis, program repair, model checking, static analysis, and fault localization, aiming to improve the reliability and scalability of software tools for real-world applications.
+    Most automated program analysis techniques are built on a silent assumption: 
+    faults are independent, and fixing one does not affect the others. In practice, 
+    this assumption routinely fails. Faults mask each other, cascade across 
+    components, and interact in ways that invalidate isolated diagnoses and 
+    render standard correctness guarantees unsound. My research develops the 
+    formal and algorithmic foundations needed to reason about programs in the 
+    presence of fault interaction — reconsidering the theoretical basis of 
+    automated repair, verification, and analysis from the ground up.
   </p>
-
   <hr>
-<h3>
-  Theme 1: Interaction-Aware Multi-Fault Program Repair
 
-  <a href="https://ieeexplore.ieee.org/document/11334386" target="_blank" rel="noopener noreferrer" title="ASE 2025 (NIER): Debugging the Undebuggable" style="margin-left:8px;">
-    <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
-  </a>
+  <h3>
+    Theme 1: Interaction-Aware Multi-Fault Program Repair
+    <a href="https://ieeexplore.ieee.org/document/11334386" target="_blank" rel="noopener noreferrer" title="ASE 2025 (NIER): Debugging the Undebuggable" style="margin-left:8px;">
+      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+    </a>
+    <a href="https://ieeexplore.ieee.org/document/11334567" target="_blank" rel="noopener noreferrer" title="ASE 2025 (NIER): Interaction-Aware Patch Assessment" style="margin-left:6px;">
+      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+    </a>
+    <a href="https://ieeexplore.ieee.org/document/11185949" target="_blank" rel="noopener noreferrer" title="ICSME 2025: Interaction-Aware Validation Oracles" style="margin-left:6px;">
+      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+    </a>
+  </h3>
+  <p>
+    When multiple faults co-exist in a program, their interactions produce 
+    emergent behaviours — masking, cascading, and synergistic effects — that 
+    defeat standard fault localisation and repair pipelines. A patch that 
+    corrects one fault in isolation may be invalidated, obscured, or rendered 
+    semantically unsound by the presence of others. This line of work builds 
+    a formal theory of fault interaction and translates it into interaction-aware 
+    repair methods: diagnostics that explicitly model fault dependencies, 
+    lightweight oracles that track interaction structure across the patch 
+    search space, and patch assessment criteria that verify correctness under 
+    composition rather than in isolation. The goal is a repair framework that 
+    is <em>robust by construction</em> in multi-fault settings, not merely 
+    effective on single-fault benchmarks.
+  </p>
+  <hr>
 
-  <a href="https://ieeexplore.ieee.org/document/11334567" target="_blank" rel="noopener noreferrer" title="ASE 2025 (NIER): Interaction-Aware Patch Assessment" style="margin-left:6px;">
-    <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
-  </a>
+  <h3>
+    Theme 2: Undecidability-Aware Program Repair
+    <a href="Confpapers/icse_slides.pdf" target="_blank" rel="noopener noreferrer"
+       title="View ICSE 2026 Slides" style="margin-left:6px;">
+      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+    </a>
+  </h3>
+  <p>
+    The dominant empirical paradigm in automated repair — generate a patch, 
+    validate it against a test suite, ship it — rests on an assumption that 
+    test-suite adequacy is a proxy for semantic correctness. It is not, and 
+    the reason is fundamental: general patch correctness is undecidable. 
+    Plausible patches that overfit to available tests are not an engineering 
+    shortcoming to be fixed with better test suites; they are a structural 
+    consequence of the underlying computability landscape. This work makes 
+    that boundary explicit. It develops undecidability-aware repair frameworks 
+    that confine synthesis to decidable program fragments, introduces 
+    <span class="math"><i>R</i><sub>OF</sub></span> as a formally grounded 
+    measure of overfitting risk, and establishes conditions under which 
+    stronger patch correctness guarantees are achievable in principle. 
+    The practical target is repair tooling that is honest about what it 
+    can and cannot guarantee — a prerequisite for deployment in 
+    safety-critical systems.
+  </p>
+  <hr>
 
-  <a href="https://ieeexplore.ieee.org/document/11185949" target="_blank" rel="noopener noreferrer" title="ICSME 2025: Interaction-Aware Validation Oracles" style="margin-left:6px;">
-    <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
-  </a>
-</h3>
-
-<p>
-  I develop methods for repairing programs affected by multiple interacting faults, a setting in which conventional techniques often break down due to masking and cascading effects that obscure root causes and invalidate isolated fixes. This work introduces interaction-aware diagnostics together with lightweight formal oracles that explicitly capture fault dependencies, enabling the construction and assessment of patches that remain correct under composition. By accounting for fault interactions during both generation and validation, the approach improves robustness and mitigates overfitting in complex multi-fault scenarios.
-</p>
-
-<hr>
-
-<h3> 
-  Theme 2: Undecidability-Aware Program Repair 
-  <a href="Confpapers/icse_slides.pdf" target="_blank" rel="noopener noreferrer" 
-     title="View ICSE 2026 Slides" style="margin-left:6px;"> 
-    <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i> 
-  </a> 
-</h3> 
-
-<p> 
-  Traditional program repair techniques often yield <em>plausible</em> patches—artifacts that satisfy the available test suite yet fail to generalize to unseen inputs—reflecting fundamental limits on semantic validation, including the undecidability of general patch correctness. This work develops undecidability-aware repair frameworks that explicitly incorporate these boundaries by restricting repair to decidable program fragments and introducing formally grounded measures such as <span class="math"><i>R</i><sub>OF</sub></span>, a quantified notion of overfitting risk. This perspective enables principled reasoning about patch validity and supports stronger correctness guarantees in safety- and mission-critical settings, where empirical adequacy alone is insufficient.
-</p>
-  
-<hr>
-
-<h3>Theme 3: Termination-Aware Program Repair</h3>
-<p>
-  This research addresses practical challenges in automated repair, integrating termination analysis, performance reasoning, and context-sensitive constraints. The goal is to produce patches that are formally correct, efficient, and safe in real-world software deployments.
-</p>
-
+  <h3>
+    Theme 3: Termination- and Performance-Aware Program Repair
+    <a href="https://ieeexplore.ieee.org/document/10978587" target="_blank" rel="noopener noreferrer" title="ASE 2024: A Formal Treatment of Performance Bugs" style="margin-left:8px;">
+      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+    </a>
+  </h3>
+  <p>
+    Correctness is necessary but not sufficient. A patch that restores 
+    functional behaviour while introducing non-termination, performance 
+    regression, or unsafe resource consumption is not a repair — it is a 
+    trade. Classical repair frameworks treat termination and performance 
+    as orthogonal concerns, addressed separately or not at all. This work 
+    integrates termination analysis and formal performance reasoning directly 
+    into the repair loop, ensuring that generated patches satisfy not just 
+    the target specification but also liveness and efficiency constraints. 
+    The result is a repair model that is simultaneously correct, terminating, 
+    and resource-aware — properties that must be jointly verified for 
+    deployment in real-world, long-running, or resource-constrained systems.
+  </p>
 </section>
 
 <section id="publications">
