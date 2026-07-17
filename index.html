@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Omar I. Al-Bataineh</title>
+  <title>Omar I. Al-Bataineh</title> 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <style>
@@ -230,20 +230,22 @@
 
 <section id="research">
   <h2>Research</h2>
+
   <p>
-    Most automated program analysis techniques are built on a silent assumption: 
-    faults are independent, and fixing one does not affect the others. In practice, 
-    this assumption routinely fails. Faults mask each other, cascade across 
-    components, and interact in ways that invalidate isolated diagnoses and 
-    render standard correctness guarantees unsound. My research develops the 
-    formal and algorithmic foundations needed to reason about programs in the 
-    presence of fault interaction — reconsidering the theoretical basis of 
-    automated repair, verification, and analysis from the ground up.
+    Modern software systems are increasingly analyzed, verified, and repaired
+    using automated reasoning techniques. Most of these techniques, however,
+    rely on simplifying assumptions about program behavior, fault independence,
+    or algorithmic decidability that often fail in realistic software. My
+    research develops the formal and algorithmic foundations needed to reason
+    about these limitations, combining software engineering, formal methods,
+    and program analysis to build techniques that are both theoretically sound
+    and practically applicable.
   </p>
+
   <hr>
 
   <h3>
-    Theme 1: Interaction-Aware Multi-Fault Program Repair
+    Theme 1: Foundations of Multi-Fault Software Engineering
     <a href="https://ieeexplore.ieee.org/document/11334386" target="_blank" rel="noopener noreferrer" title="ASE 2025 (NIER): Debugging the Undebuggable" style="margin-left:8px;">
       <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
     </a>
@@ -254,67 +256,49 @@
       <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
     </a>
   </h3>
+
   <p>
-    When multiple faults co-exist in a program, their interactions produce 
-    emergent behaviours — masking, cascading, and synergistic effects — that 
-    defeat standard fault localisation and repair pipelines. A patch that 
-    corrects one fault in isolation may be invalidated, obscured, or rendered 
-    semantically unsound by the presence of others. This line of work builds 
-    a formal theory of fault interaction and translates it into interaction-aware 
-    repair methods: diagnostics that explicitly model fault dependencies, 
-    lightweight oracles that track interaction structure across the patch 
-    search space, and patch assessment criteria that verify correctness under 
-    composition rather than in isolation. The goal is a repair framework that 
-    is <em>robust by construction</em> in multi-fault settings, not merely 
-    effective on single-fault benchmarks.
+    Software faults rarely occur in isolation. Their interactions—including
+    masking, cascading, and synergistic effects—can fundamentally alter program
+    behavior and undermine conventional approaches to testing, debugging,
+    verification, automated repair, and fault localization. My research
+    develops the formal foundations of <em>fault interaction</em> and translates
+    them into interaction-aware techniques for symbolic execution, program
+    analysis, verification, fuzzing, and automated program repair. The long-term
+    objective is to establish a unified theory of multi-fault software
+    engineering in which analysis and repair reason about interacting faults
+    explicitly rather than assuming their independence.
   </p>
+
   <hr>
 
   <h3>
-    Theme 2: Undecidability-Aware Program Repair
+    Theme 2: Foundations of Automated Reasoning and Decidability
     <a href="Confpapers/icse_slides.pdf" target="_blank" rel="noopener noreferrer"
-       title="View ICSE 2026 Slides" style="margin-left:6px;">
+       title="ICSE 2026 (NIER): The Undecidability of Overfitting in Automated Program Repair"
+       style="margin-left:6px;">
+      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
+    </a>
+    <a href="https://ieeexplore.ieee.org/document/10992560" target="_blank" rel="noopener noreferrer"
+       title="ASE 2024: A Formal Treatment of Performance Bugs"
+       style="margin-left:6px;">
       <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
     </a>
   </h3>
-  <p>
-    The dominant empirical paradigm in automated repair — generate a patch, 
-    validate it against a test suite, ship it — rests on an assumption that 
-    test-suite adequacy is a proxy for semantic correctness. It is not, and 
-    the reason is fundamental: general patch correctness is undecidable. 
-    Plausible patches that overfit to available tests are not an engineering 
-    shortcoming to be fixed with better test suites; they are a structural 
-    consequence of the underlying computability landscape. This work makes 
-    that boundary explicit. It develops undecidability-aware repair frameworks 
-    that confine synthesis to decidable program fragments, introduces 
-    <span class="math"><i>R</i><sub>OF</sub></span> as a formally grounded 
-    measure of overfitting risk, and establishes conditions under which 
-    stronger patch correctness guarantees are achievable in principle. 
-    The practical target is repair tooling that is honest about what it 
-    can and cannot guarantee — a prerequisite for deployment in 
-    safety-critical systems.
-  </p>
-  <hr>
 
-  <h3>
-    Theme 3: Termination- and Performance-Aware Program Repair
-    <a href="https://ieeexplore.ieee.org/document/10992560" target="_blank" rel="noopener noreferrer" title="ASE 2024: A Formal Treatment of Performance Bugs" style="margin-left:8px;">
-      <i class="fa-solid fa-file-pdf" style="color:#E34C26;"></i>
-    </a>
-  </h3>
   <p>
-    Correctness is necessary but not sufficient. A patch that restores 
-    functional behaviour while introducing non-termination, performance 
-    regression, or unsafe resource consumption is not a repair — it is a 
-    trade. Classical repair frameworks treat termination and performance 
-    as orthogonal concerns, addressed separately or not at all. This work 
-    integrates termination analysis and formal performance reasoning directly 
-    into the repair loop, ensuring that generated patches satisfy not just 
-    the target specification but also liveness and efficiency constraints. 
-    The result is a repair model that is simultaneously correct, terminating, 
-    and resource-aware — properties that must be jointly verified for 
-    deployment in real-world, long-running, or resource-constrained systems.
+    My second research direction investigates the theoretical limits of
+    automated software reasoning. I study how computability, formal
+    verification, symbolic reasoning, termination analysis, and program
+    semantics shape what automated techniques can guarantee. This includes
+    establishing formal limits such as the undecidability of repair
+    overfitting, developing verification-aware reasoning frameworks, and
+    integrating semantic properties—including correctness, termination, and
+    performance—into automated analysis and synthesis. The broader goal is to
+    design software engineering methods whose guarantees are explicitly aligned
+    with the underlying theory of computation.
   </p>
+
 </section>
 
 <section id="collaborators">
