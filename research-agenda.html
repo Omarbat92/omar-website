@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Agenda — Omar I. Al-Bataineh</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #004466;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      color: #111;
+      background-color: #fafafa;
+      line-height: 1.7;
+    }
+
+    header {
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid #ddd;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      margin: 0.4rem 0 0 0;
+      color: #333;
+    }
+
+    header .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header .back-link:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    h3.theme-title {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .theme-intro {
+      margin-bottom: 1.5rem;
+    }
+
+    .challenge {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .challenge h4 {
+      margin: 0 0 0.75rem 0;
+      font-size: 1.15rem;
+      color: #111;
+    }
+
+    .challenge dl {
+      margin: 0;
+    }
+
+    .challenge dt {
+      font-weight: bold;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: var(--accent);
+      margin-top: 0.9rem;
+    }
+
+    .challenge dt:first-of-type {
+      margin-top: 0;
+    }
+
+    .challenge dd {
+      margin: 0.2rem 0 0 0;
+      font-size: 0.98rem;
+      color: #222;
+    }
+
+    .challenge .rep-paper {
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .challenge .rep-paper a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .challenge .rep-paper a:hover {
+      text-decoration: underline;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: var(--accent);
+      background-color: #eaf2f6;
+      border: 1px solid #cfe0e8;
+      border-radius: 3px;
+      padding: 0.15rem 0.5rem;
+      margin-left: 0.6rem;
+      vertical-align: middle;
+    }
+
+    .icon-legend {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem 1rem;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+
+    .icon-legend span {
+      margin-right: 1.2rem;
+      white-space: nowrap;
+    }
+
+    .challenge-tags {
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .disclaimer {
+      font-size: 0.92rem;
+      color: #444;
+      background-color: #fff;
+      border-left: 3px solid #ccc;
+      padding: 0.75rem 1rem;
+      margin-top: 1rem;
+    }
+
+    .agenda-figure {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .agenda-figure svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .agenda-figure figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+      padding-top: 2rem;
+      margin-top: 3rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="back-link">&larr; Back to homepage</a>
+    <h1>Research Agenda</h1>
+    <p>Omar I. Al-Bataineh — Gran Sasso Science Institute, Italy</p>
+  </header>
+
+  <section id="vision">
+    <h2>Vision</h2>
+    <p>
+      Automated software engineering techniques — repair, testing, symbolic
+      execution, and verification — are increasingly relied upon to reason
+      about real software, yet most of them rest on simplifying assumptions:
+      that faults are independent, that local correctness composes, or that
+      the underlying decision problems are tractable. These assumptions
+      break down in realistic, multi-fault, and formally rich settings. The
+      problems below outline what I see as the fundamental open questions
+      standing between today's automated techniques and the guarantees
+      practitioners actually need. They define the long-term research
+      program I am building, organized around the two themes introduced on
+      my <a href="index.html#research">homepage</a>.
+    </p>
+
+    <p class="disclaimer">
+      This page summarizes research problems that I believe represent
+      promising long-term directions for the software engineering and
+      formal methods communities. Some are active topics in my current
+      research, while others are intended to stimulate broader discussion
+      and collaboration.
+    </p>
+
+    <figure class="agenda-figure">
+      <svg viewBox="0 0 700 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of the research agenda structure">
+        <style>
+          .node-box { fill: #eaf2f6; stroke: #004466; stroke-width: 1.5; }
+          .root-box { fill: #004466; stroke: #004466; }
+          .node-text { font-family: Georgia, serif; font-size: 12px; fill: #111; text-anchor: middle; }
+          .root-text { font-family: Georgia, serif; font-size: 14px; fill: #fff; text-anchor: middle; font-weight: bold; }
+          .edge { stroke: #99b3bf; stroke-width: 1.5; fill: none; }
+        </style>
+
+        <!-- Root -->
+        <rect class="node-box root-box" x="260" y="6" width="180" height="32" rx="4"/>
+        <text class="root-text" x="350" y="27">Research Agenda</text>
+
+        <!-- Edges from root to themes -->
+        <path class="edge" d="M350,38 L350,54 L170,54 L170,72"/>
+        <path class="edge" d="M350,38 L350,54 L520,54 L520,72"/>
+
+        <!-- Theme I -->
+        <rect class="node-box" x="95" y="72" width="150" height="32" rx="4"/>
+        <text class="node-text" x="170" y="92">Multi-Fault SE</text>
+
+        <!-- Theme II -->
+        <rect class="node-box" x="440" y="72" width="160" height="32" rx="4"/>
+        <text class="node-text" x="520" y="92">Reasoning &amp; Decidability</text>
+
+        <!-- Theme I children edges -->
+        <path class="edge" d="M170,104 L170,120 L60,120 L60,136"/>
+        <path class="edge" d="M170,104 L170,136"/>
+        <path class="edge" d="M170,104 L170,120 L280,120 L280,136"/>
+
+        <!-- Theme I children -->
+        <rect class="node-box" x="10" y="136" width="100" height="42" rx="4"/>
+        <text class="node-text" x="60" y="154">Repair</text>
+        <text class="node-text" x="60" y="168">Compatibility</text>
+
+        <rect class="node-box" x="120" y="136" width="100" height="42" rx="4"/>
+        <text class="node-text" x="170" y="154">Symbolic</text>
+        <text class="node-text" x="170" y="168">Execution</text>
+
+        <rect class="node-box" x="230" y="136" width="100" height="42" rx="4"/>
+        <text class="node-text" x="280" y="154">Fault Interaction</text>
+        <text class="node-text" x="280" y="168">Models</text>
+
+        <!-- Theme II children edges -->
+        <path class="edge" d="M520,104 L520,120 L410,120 L410,136"/>
+        <path class="edge" d="M520,104 L520,136"/>
+        <path class="edge" d="M520,104 L520,120 L630,120 L630,136"/>
+
+        <!-- Theme II children -->
+        <rect class="node-box" x="360" y="136" width="100" height="42" rx="4"/>
+        <text class="node-text" x="410" y="154">Decidable</text>
+        <text class="node-text" x="410" y="168">Fragments</text>
+
+        <rect class="node-box" x="470" y="136" width="100" height="42" rx="4"/>
+        <text class="node-text" x="520" y="154">Compositional</text>
+        <text class="node-text" x="520" y="168">Correctness</text>
+
+        <rect class="node-box" x="580" y="136" width="110" height="42" rx="4"/>
+        <text class="node-text" x="635" y="154">Verification-Aware</text>
+        <text class="node-text" x="635" y="168">Repair</text>
+      </svg>
+      <figcaption>Figure 1. The research agenda organized around two themes and their constituent open problems.</figcaption>
+    </figure>
+
+    <div class="icon-legend">
+      <span>&#127891; Suitable for MSc</span>
+      <span>&#127893; Suitable for PhD</span>
+      <span>&#129309; Collaboration welcome</span>
+      <span>&#128196; Representative papers</span>
+    </div>
+  </section>
+
+  <section id="theme-1">
+    <h2>Theme I: Foundations of Multi-Fault Software Engineering</h2>
+    <p class="theme-intro">
+      Faults rarely occur in isolation, yet most analysis, testing, and
+      repair techniques are designed and evaluated under a single-fault
+      assumption. The challenges below ask what changes — technically and
+      formally — once that assumption is dropped.
+    </p>
+
+    <div class="challenge">
+      <h4>Challenge 1 — Repair Compatibility <span class="status-badge">Status: Open (Foundational)</span></h4>
+      <dl>
+        <dt>Research Question</dt>
+        <dd>When do independently correct repairs remain correct once composed into the same system?</dd>
+
+        <dt>Why It Is Difficult</dt>
+        <dd>Compatibility is a relational property of the composed program, not of either repair alone — two repairs can each satisfy their own specification while still violating a global property that neither one was designed to preserve.</dd>
+
+        <dt>Why Existing Techniques Fall Short</dt>
+        <dd>Standard repair pipelines generate and validate patches independently against local test suites, with no mechanism for reasoning about cross-repair interaction after deployment.</dd>
+
+        <dt>Possible Research Directions</dt>
+        <dd>Identifying decidable compatibility fragments (e.g., repairs with disjoint semantic footprints), sound approximations for the general case, and compatibility-aware repair generation that treats composition as a first-class constraint.</dd>
+
+        <dt>Long-Term Vision</dt>
+        <dd>A principled foundation for multi-fault repair pipelines, replacing an implicit and often-violated assumption with explicit, checkable guarantees.</dd>
+      </dl>
+      <div class="challenge-tags">&#127893; Suitable for PhD &nbsp;&middot;&nbsp; &#129309; Collaboration welcome</div>
+    </div>
+
+    <div class="challenge">
+      <h4>Challenge 2 — Interaction-Aware Symbolic Execution <span class="status-badge">Status: Open (Foundational)</span></h4>
+      <dl>
+        <dt>Research Question</dt>
+        <dd>How should symbolic execution explore and represent program behavior when multiple faults interact along the same execution paths?</dd>
+
+        <dt>Why It Is Difficult</dt>
+        <dd>Classical symbolic execution treats each path condition independently; when faults mask, cascade, or combine, the resulting symbolic state no longer decomposes cleanly per fault, and path explosion is compounded by fault interaction.</dd>
+
+        <dt>Why Existing Techniques Fall Short</dt>
+        <dd>Existing symbolic execution engines are built around single-fault triage and localization, offering no explicit model of how multiple faulty regions jointly constrain program behavior.</dd>
+
+        <dt>Possible Research Directions</dt>
+        <dd>Interaction-aware path prioritization, compositional symbolic summaries for interacting fault regions, and formal characterizations of when fault interactions can be decomposed safely.</dd>
+
+        <dt>Long-Term Vision</dt>
+        <dd>More accurate fault localization and patch validation for realistic, multi-fault programs, where current symbolic techniques are known to underperform.</dd>
+      </dl>
+      <div class="challenge-tags">&#127893; Suitable for PhD &nbsp;&middot;&nbsp; &#129309; Collaboration welcome</div>
+    </div>
+
+    <div class="challenge">
+      <h4>Challenge 3 — Formal Models of Fault Interaction <span class="status-badge">Status: Open (Exploratory)</span></h4>
+      <dl>
+        <dt>Research Question</dt>
+        <dd>Can fault interaction — masking, cascading, and synergistic effects between faults — be given a general formal semantics, rather than being studied case by case?</dd>
+
+        <dt>Why It Is Difficult</dt>
+        <dd>Interaction effects are highly context-dependent: the same pair of faults may mask each other under one input distribution and compound under another, resisting a single static characterization.</dd>
+
+        <dt>Why Existing Techniques Fall Short</dt>
+        <dd>Empirical studies document interaction effects convincingly but largely stop short of a semantic model that predicts when and why they arise, limiting generalization beyond the studied programs.</dd>
+
+        <dt>Possible Research Directions</dt>
+        <dd>A semantic taxonomy of interaction types grounded in program state and execution traces, and formal conditions under which two faults are guaranteed to be non-interacting.</dd>
+
+        <dt>Long-Term Vision</dt>
+        <dd>A unifying theory that testing, debugging, fault localization, and repair techniques could all build on, rather than each rediscovering interaction effects independently.</dd>
+      </dl>
+      <div class="challenge-tags">&#127891; Suitable for MSc &nbsp;&middot;&nbsp; &#127893; Suitable for PhD &nbsp;&middot;&nbsp; &#129309; Collaboration welcome</div>
+    </div>
+  </section>
+
+  <section id="theme-2">
+    <h2>Theme II: Foundations of Automated Reasoning and Decidability</h2>
+    <p class="theme-intro">
+      Automated repair, testing, and verification techniques implicitly
+      promise guarantees they cannot always deliver. The challenges below
+      ask where the boundary between tractable and fundamentally impossible
+      actually lies, and how to design techniques that respect it.
+    </p>
+
+    <div class="challenge">
+      <h4>Challenge 4 — Decidable Repair Fragments <span class="status-badge">Status: Open (Active)</span></h4>
+      <dl>
+        <dt>Research Question</dt>
+        <dd>Beyond knowing that general repair-correctness and repair-compatibility problems are undecidable, which restricted classes of repairs admit decidable, checkable guarantees?</dd>
+
+        <dt>Why It Is Difficult</dt>
+        <dd>Undecidability results (including the undecidability of overfitting and of repair compatibility) hold for unrestricted repairs; identifying useful decidable fragments requires restrictions that are both formally tractable and representative of how repairs are generated in practice.</dd>
+
+        <dt>Why Existing Techniques Fall Short</dt>
+        <dd>Practical repair tools sidestep decidability entirely, relying on heuristics and test-suite validation with no explicit account of what can or cannot be guaranteed for the class of repairs they generate.</dd>
+
+        <dt>Possible Research Directions</dt>
+        <dd>A taxonomy of repair classes (bounded edit locations, template-based repairs, disjoint-footprint repairs) paired with the strongest guarantee decidable for each, rather than a search for a universal checker.</dd>
+
+        <dt>Long-Term Vision</dt>
+        <dd>Repair systems that can honestly state what they guarantee for a given class of repairs, instead of implying guarantees that undecidability rules out in general.</dd>
+      </dl>
+      <div class="challenge-tags">&#127893; Suitable for PhD &nbsp;&middot;&nbsp; &#129309; Collaboration welcome &nbsp;&middot;&nbsp; &#128196; Representative paper below</div>
+      <p class="rep-paper">
+        Related: <a href="https://dl.acm.org/doi/full/10.1145/3786582.3786802" target="_blank" rel="noopener noreferrer">The Undecidability of Overfitting in Automated Program Repair</a>, ICSE 2026 (NIER track).
+      </p>
+    </div>
+
+    <div class="challenge">
+      <h4>Challenge 5 — Compositional Patch Correctness <span class="status-badge">Status: Open (Exploratory)</span></h4>
+      <dl>
+        <dt>Research Question</dt>
+        <dd>Can patch correctness be verified compositionally — establishing global correctness from local, per-patch proof obligations — for realistic multi-patch systems?</dd>
+
+        <dt>Why It Is Difficult</dt>
+        <dd>Compositional verification frameworks (assume-guarantee reasoning, interface automata) were developed for hand-written component contracts; automatically generated patches rarely come with contracts strong enough to support this style of reasoning.</dd>
+
+        <dt>Why Existing Techniques Fall Short</dt>
+        <dd>Program repair and compositional verification have developed largely as separate communities, and existing repair validation does not produce artifacts — contracts, interfaces, or invariants — that a compositional verifier could consume.</dd>
+
+        <dt>Possible Research Directions</dt>
+        <dd>Repair techniques that synthesize lightweight local contracts alongside patches, and verification procedures adapted to reason over such contracts under composition.</dd>
+
+        <dt>Long-Term Vision</dt>
+        <dd>A bridge between automated repair and formal verification, moving patch validation from empirical testing toward auditable correctness arguments.</dd>
+      </dl>
+      <div class="challenge-tags">&#127893; Suitable for PhD &nbsp;&middot;&nbsp; &#129309; Collaboration welcome</div>
+    </div>
+
+    <div class="challenge">
+      <h4>Challenge 6 — Verification-Aware Program Repair <span class="status-badge">Status: Open (Exploratory)</span></h4>
+      <dl>
+        <dt>Research Question</dt>
+        <dd>How should model checking and specification languages be extended to reason natively about interacting faults and the repairs applied to them, rather than treating each fix as an isolated model update?</dd>
+
+        <dt>Why It Is Difficult</dt>
+        <dd>Model checking scales by exploiting structure in the model; treating every repair as an arbitrary perturbation to be re-verified from scratch forfeits that structure and reintroduces state-space explosion at every repair step.</dd>
+
+        <dt>Why Existing Techniques Fall Short</dt>
+        <dd>Verification tools are largely repair-agnostic, and repair tools are largely verification-agnostic; neither side offers incremental or interaction-aware guarantees when multiple fixes are applied over time.</dd>
+
+        <dt>Possible Research Directions</dt>
+        <dd>Fault-aware specification languages that make interaction assumptions explicit, and incremental verification procedures that reuse prior verification effort across sequential or composed repairs.</dd>
+
+        <dt>Long-Term Vision</dt>
+        <dd>Verified multi-fault repair as a practical possibility rather than a purely theoretical goal, with verification cost that scales with the size of a repair rather than the size of the system.</dd>
+      </dl>
+      <div class="challenge-tags">&#127893; Suitable for PhD &nbsp;&middot;&nbsp; &#129309; Collaboration welcome</div>
+    </div>
+  </section>
+
+  <section id="collaboration">
+    <h2>Opportunities for Collaboration</h2>
+    <p>
+      These challenges span software engineering, formal methods, program
+      analysis, and the theory of computation, and I expect progress on
+      most of them to require genuinely cross-disciplinary collaboration.
+      I am glad to discuss any of the challenges above in more depth,
+      whether the interest is theoretical (formal models, decidability,
+      compositional verification) or systems-oriented (building
+      interaction-aware tools for repair, testing, or symbolic execution).
+    </p>
+  </section>
+
+  <section id="students">
+    <h2>Interested Students</h2>
+    <p>
+      Several of these challenges are well suited to PhD or MSc research,
+      ranging from focused technical questions (e.g., decidable fragments
+      of a specific challenge) to more open-ended exploratory work. If you
+      are a student interested in formal methods, program analysis, or
+      automated program repair and would like to discuss a potential
+      project connected to any of the challenges above, please get in
+      touch.
+    </p>
+  </section>
+
+  <section id="philosophy">
+    <h2>Research Philosophy</h2>
+    <p>
+      I believe software engineering should increasingly be grounded in
+      rigorous semantic foundations. Rather than designing heuristics whose
+      guarantees remain implicit, my research seeks to characterize
+      precisely what automated techniques can guarantee, where those
+      guarantees fundamentally break down, and how formal reasoning can be
+      used to build more reliable software engineering methods.
+    </p>
+    <p>
+      This perspective naturally combines software engineering, formal
+      methods, program analysis, and the theory of computation — and it is
+      why the challenges above are framed around what is provably possible,
+      not only what is empirically observed.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: omar.albataineh@gssi.it</p>
+    <p><a href="index.html">&larr; Back to homepage</a></p>
+  </section>
+
+  <footer>
+    &copy; 2026 Omar I. Al-Bataineh
+  </footer>
+
+</body>
+</html>
