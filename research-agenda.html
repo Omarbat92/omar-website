@@ -276,8 +276,8 @@
         <path class="edge" d="M350,38 L350,54 L520,54 L520,72"/>
 
         <!-- Theme I -->
-        <rect class="node-box" x="95" y="72" width="150" height="32" rx="4"/>
-        <text class="node-text" x="170" y="92">Multi-Fault SE</text>
+        <rect class="node-box" x="82" y="72" width="175" height="32" rx="4"/>
+        <text class="node-text" x="170" y="92">Interaction-Aware SE</text>
 
         <!-- Theme II -->
         <rect class="node-box" x="432" y="72" width="175" height="32" rx="4"/>
@@ -331,12 +331,16 @@
   </section>
 
   <section id="theme-1">
-    <h2>Theme I: Foundations of Multi-Fault Software Engineering</h2>
+    <h2>Theme I: Foundations of Interaction-Aware Software Engineering</h2>
     <p class="theme-intro">
-      Faults rarely occur in isolation, yet most analysis, testing, and
-      repair techniques are designed and evaluated under a single-fault
-      assumption. The challenges below ask what changes — technically and
-      formally — once that assumption is dropped.
+      Faults rarely occur in isolation, and their interactions — masking,
+      cascading, and synergistic effects — can fundamentally alter program
+      behavior. Yet most analysis, testing, and repair techniques are
+      designed and evaluated under an implicit single-fault assumption,
+      treating co-occurring faults in multi-fault programs as if they act
+      independently. The challenges below ask what changes — technically
+      and formally — once fault interaction, rather than mere co-occurrence,
+      is taken seriously.
     </p>
 
     <div class="challenge">
