@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Omar I. Al-Bataineh</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
@@ -108,6 +111,51 @@
       header img.profile-pic { align-self: center; }
       nav { flex-direction: column; gap: 0.5rem; }
     }
+
+    .quran-verse {
+      text-align: center;
+      margin: 2.25rem 0 2.5rem 0;
+    }
+    .quran-verse .verse-text {
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-style: normal;
+      color: var(--text-muted);
+      line-height: 1.9;
+      letter-spacing: 0.01em;
+    }
+    .quran-verse .verse-ref {
+      display: block;
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+      direction: rtl;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      opacity: 0.65;
+      margin-top: 0.4rem;
+    }
+
+    .agenda-cta {
+      margin-top: 1.5rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--border-color);
+      text-align: right;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .agenda-cta a {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: gap 0.15s ease;
+    }
+    .agenda-cta a:hover { gap: 0.55rem; text-decoration: underline; }
   </style>
 </head>
 
@@ -121,11 +169,15 @@
     <img src="omar-image.jpg" alt="Omar I. Al-Bataineh" class="profile-pic">
   </header>
 
+  <div class="quran-verse">
+    <span class="verse-text">﴿وَقُل رَّبِّ زِدْنِي عِلْمًا﴾</span>
+    <span class="verse-ref">طه: ١١٤</span>
+  </div>
+
   <nav>
     <a href="#news">News</a>
     <a href="#bio">Bio</a>
     <a href="#research">Research</a>
-    <a href="research-agenda.html">Research Agenda</a>
     <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
     <a href="#collaborators">Collaborators</a>
@@ -202,18 +254,16 @@
       design software engineering methods whose guarantees are explicitly aligned
       with the underlying theory of computation.
     </p>
-    <hr>
-    <h3>Research Agenda</h3>
     <p>
-      My current publications represent only part of a broader long-term
-      research agenda. I maintain a collection of research challenges that
-      identify fundamental open questions spanning multi-fault software
-      engineering, automated program repair, symbolic execution, software
-      verification, fuzzing, and the theoretical foundations of automated
-      software reasoning. These challenges motivate future work, potential
-      collaborations, and research opportunities for students and researchers.
+      These two threads feed into a broader, long-term research agenda — a living
+      collection of open problems spanning multi-fault software engineering,
+      automated program repair, symbolic execution, software verification, fuzzing,
+      and the theoretical foundations of automated software reasoning, motivating
+      future work and potential collaborations.
     </p>
-    <p><a href="research-agenda.html"><strong>Explore My Research Agenda &rarr;</strong></a></p>
+    <div class="agenda-cta">
+      <a href="research-agenda.html">Explore the full research agenda <i class="fas fa-arrow-right"></i></a>
+    </div>
   </section>
 
 <section id="publications">
